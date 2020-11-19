@@ -5,6 +5,7 @@
 export BOTO_CONFIG=/dev/null; # see for more information https://github.com/broadinstitute/gatk/pull/3350
 openssl aes-256-cbc -K $encrypted_703d76169d63_key -iv $encrypted_703d76169d63_iv -in resources_for_CI/servicekey.json.enc -out servicekey.json -d;
 scripts/travis/install_gcloud.sh;
+ls -Rl $GCLOUD_HOME/gcloud;
 $GCLOUD_HOME/gcloud components update --quiet;
 if [[ $TEST_TYPE == cloud ]]; then
    $GCLOUD_HOME/gcloud components install beta --quiet;
