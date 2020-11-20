@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+set -v
 #Install gcloud
 if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
     mkdir -p $HOME/gcloud &&
